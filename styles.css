@@ -93,6 +93,8 @@ nav {
 }
 
 #next {
+   background-color: grey;
+   opacity: 0.5;
    border-top-left-radius: 0px;
    border-bottom-left-radius: 0px;
    width:1vw;
@@ -101,6 +103,8 @@ nav {
 }
 
 #previous {
+   background-color: grey;
+   opacity: 0.5;
    border-top-right-radius: 0px;
    border-bottom-right-radius: 0px;
    width:1vw;

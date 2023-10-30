@@ -3,6 +3,8 @@ const d = document.getElementById("canvas_back");
 const saveBtn = document.getElementById("save");
 const frontBtn = document.getElementById("front");
 const backBtn = document.getElementById("back");
+const next = document.getElementById("next");
+const previous = document.getElementById("previous");
 const printBtn = document.getElementById("print");
 const saveAllBtn = document.getElementById("save-all");
 const flipBtn = document.getElementById("flip");
@@ -83,8 +85,6 @@ c.addEventListener("mouseup", function (event) {
     ctx.beginPath();
 });
 
-
-
 d.addEventListener("mousedown", function (event) {
     
     isPainting = true;
@@ -106,6 +106,61 @@ d.addEventListener("mousemove", function (event) {
 });
 
 d.addEventListener("mouseup", function (event) {
+    isPainting = false;
+    ctxd.beginPath();
+});
+
+
+
+// Front Flashcard Touch screen capabilities ***********************************
+c.addEventListener("touchstart", function (event) {
+    
+    isPainting = true;
+    console.log(event.targetTouches[0].clientX);
+
+    
+    
+
+});
+
+c.addEventListener("touchmove", function (event) {
+    console.log(event);
+    if(!isPainting){
+        return;
+    }
+    ctx.stroke();
+    
+    ctx.lineTo((event.targetTouches[0].clientX - c.getBoundingClientRect().left)* 1.5, (event.targetTouches[0].clientY - c.getBoundingClientRect().top) * 1.69);
+});
+
+c.addEventListener("touchend", function (event) {
+    isPainting = false;
+    ctx.beginPath();
+});
+
+
+
+d.addEventListener("touchstart", function (event) {
+    
+    isPainting = true;
+    console.log("in mouse down");
+
+    
+    
+
+});
+
+d.addEventListener("touchmove", function (event) {
+    console.log(event);
+    if(!isPainting){
+        return;
+    }
+    ctxd.stroke();
+    
+    ctxd.lineTo((event.targetTouches[0].clientX - d.getBoundingClientRect().left) * 1.5, (event.targetTouches[0].clientY - d.getBoundingClientRect().top) * 1.69);
+});
+
+d.addEventListener("touchend", function (event) {
     isPainting = false;
     ctxd.beginPath();
 });
@@ -225,6 +280,16 @@ saveAllBtn.addEventListener("click", function () {
     //   .done(function( msg ) {
     //     alert( "Done" );
     //   });
+});
+
+
+
+next.addEventListener("click", function(){
+
+});
+
+previous.addEventListener("click", function () {
+
 });
 
 
