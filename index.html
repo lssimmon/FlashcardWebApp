@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body> 
    
    <nav></nav>
-    <canvas id="draw"></canvas>
+
+   
+   
+    
+    <!-- <div class="scene">
+        <div class="card">
+            <canvas id="canvas_front" class="card__face card__face--front"></canvas>
+            <canvas id="canvas_back" class="card__face card__face--back"></canvas>
+        </div>
+    </div> -->
+    <canvas id="canvas_back" class="card_b"></canvas>
+    <canvas id="canvas_front" class="card_f"></canvas>
+    <div class="buttons">
+        <div id="next">></div>
+        <div id="previous"><</div>
+    </div>
+   
 
     <div class="buttons">
-        <div id="save-all">Save All</div>
+        <div id="save-all">Save Progress</div>
         <div id="save">Save</div>
-        <div id="front">Front-side</div>
-        <div id="back">Back-side</div>
-        <div id="print">Print Flashcard</div>
+        <!-- <div id="front">Front-side</div>
+        <div id="back">Back-side</div> -->
+        <div id="print">Review Flashcards</div>
+        <div id="flip">Flip Card</div>
     </div>
     
     <div id="images"></div>
-    
-
-
-      
-
 
 </body>
-<script src="app.js"></script>
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </html>
