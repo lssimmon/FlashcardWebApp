@@ -1,5 +1,3 @@
-
-
 const c = document.getElementById("canvas_front");
 const d = document.getElementById("canvas_back");
 const saveBtn = document.getElementById("save");
