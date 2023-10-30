@@ -78,7 +78,7 @@ c.addEventListener("mousemove", function (event) {
     ctx.lineTo((event.clientX - c.getBoundingClientRect().left)* 1.5, (event.clientY - c.getBoundingClientRect().top) * 1.69);
 });
 
-c.addEventListener("mouseup", function(event) {
+c.addEventListener("mouseup", function (event) {
     isPainting = false;
     ctx.beginPath();
 });
@@ -105,7 +105,7 @@ d.addEventListener("mousemove", function (event) {
     ctxd.lineTo((event.clientX - d.getBoundingClientRect().left) * 1.5, (event.clientY - d.getBoundingClientRect().top) * 1.69);
 });
 
-d.addEventListener("mouseup", function(event) {
+d.addEventListener("mouseup", function (event) {
     isPainting = false;
     ctxd.beginPath();
 });
